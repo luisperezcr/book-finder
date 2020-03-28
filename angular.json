@@ -140,5 +140,8 @@
       }
     }
   },
-  "defaultProject": "book-finder"
+  "defaultProject": "book-finder",
+  "cli": {
+    "analytics": false
+  }
 }
