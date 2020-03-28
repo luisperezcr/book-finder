@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FinderService } from './finder/finder.service';
 import { SearchInputComponent } from './finder/components/search-input/search-input.component';
 import { BookItemComponent } from './finder/components/book-item/book-item.component';
+import { BookListComponent } from './finder/containers/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchInputComponent,
-    BookItemComponent
+    BookItemComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
