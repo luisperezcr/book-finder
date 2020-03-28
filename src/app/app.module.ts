@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { FinderService } from './finder/finder.service';
@@ -17,7 +18,8 @@ import { BookListComponent } from './finder/containers/book-list/book-list.compo
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [FinderService],
   bootstrap: [AppComponent]
