@@ -8,6 +8,7 @@ import { FinderService } from './finder/finder.service';
 import { SearchInputComponent } from './finder/components/search-input/search-input.component';
 import { BookItemComponent } from './finder/components/book-item/book-item.component';
 import { BookListComponent } from './finder/containers/book-list/book-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BookListComponent } from './finder/containers/book-list/book-list.compo
   imports: [
     BrowserModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [FinderService],
   bootstrap: [AppComponent]
