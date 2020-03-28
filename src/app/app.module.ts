@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { FinderService } from './finder/finder.service';
+import { SearchInputComponent } from './finder/components/search-input/search-input.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchInputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FinderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

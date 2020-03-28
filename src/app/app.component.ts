@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FinderService } from './finder/finder.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'book-finder';
+
+  constructor(private finderService: FinderService) {}
+
+  getBooks() {
+    this.finderService.getBooks();
+  }
 }
