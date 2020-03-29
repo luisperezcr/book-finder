@@ -25,3 +25,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Opportunity for improvements
 
 * Make it responsive.
+* Add Unit Tests
