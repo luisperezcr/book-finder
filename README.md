@@ -22,8 +22,6 @@ In order to see the app locally, do the following:
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-<!-- ## Opportunity for improvements
+## Opportunity for improvements
 
-* Add better images `(assets/cars)` because the project is focused on other things, not images.
-* Create a `fake` server to retrieve the cars data.
-* Add a tool to add more cars. -->
+* Make it responsive.
