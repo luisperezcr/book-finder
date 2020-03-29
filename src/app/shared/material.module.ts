@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRippleModule } from '@angular/material/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatIconModule,
     MatChipsModule,
     MatTooltipModule,
-    MatRippleModule
+    MatRippleModule,
+    MatToolbarModule
   ],
   exports: [
     MatFormFieldModule,
@@ -29,7 +31,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatIconModule,
     MatChipsModule,
     MatTooltipModule,
-    MatRippleModule
+    MatRippleModule,
+    MatToolbarModule
   ]
 })
 export class MaterialModule { }
