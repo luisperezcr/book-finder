@@ -28,7 +28,7 @@
       <mat-chip *ngFor="let category of book.volumeInfo.categories">{{ category }}</mat-chip>
     </mat-chip-list>
 
-    <a [href]="book?.volumeInfo?.previewLink" target="_blank" rel="noopener" matRipple matRippleCentered="true" fxLayout fxLayoutAlign="center center"> 
+    <a mat-icon-button [href]="book?.volumeInfo?.previewLink" target="_blank" rel="noopener"> 
       <mat-icon>launch</mat-icon>
     </a>
   </mat-card-footer>
