@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,8 @@ export class FinderService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks(): void {
-    this.http.get('https://www.googleapis.com/books/v1/volumes?q=steve+jobs&lan=en')
-    .subscribe(books => {
-      console.log(books);
-    });
+  findBooks(search: string): Observable<any> {
+    const params = new HttpParams().set('q', search);
+    return this.http.get('https://www.googleapis.com/books/v1/volumes', { params });
   }
 }
