@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BookItemComponent implements OnInit {
 
   @Input()
-  book;
+  book: any;
 
   bookAuthors: string;
   bookShortedDescription: string;
