@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-search-input',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchInputComponent implements OnInit {
 
+  form: FormGroup;
+  search: EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+    this.form = new FormGroup({
+      search: new FormControl(null, [Validators.required]),
+    });
   }
 
+  onSubmit(): void {
+    if (this.form.valid) {
+      const searchInput = this.form.value.search;
+      this.search.emit(searchInput);
+    }
+  }
 }
