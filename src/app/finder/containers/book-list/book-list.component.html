@@ -1,6 +1,9 @@
 <div class="book-list-wrapper" fxLayout="column" fxLayoutAlign="center center">
   <app-search-input (search)="onSearch($event)"></app-search-input>
-  <p *ngIf="!bookList?.length" class="no-search-message">No results... Make a search!</p>
+  <p *ngIf="!bookList?.length" class="no-search-message">
+    No results... Make a search!
+    <span>This finder only shows the top 10 books based on your search.</span>
+  </p>
   <div class="book-list" fxLayout="row wrap" fxLayoutGap="12px" fxLayoutAlign="center center">
     <app-book-item
       fxLayout
