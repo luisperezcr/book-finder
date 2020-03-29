@@ -16,8 +16,6 @@ export class BookItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.book);
-
     this.bookAuthors = this.book.volumeInfo.authors.join(', ');
     this.bookShortedDescription = this.book.volumeInfo.description ? `${this.book.volumeInfo.description.substring(0, 180)}...` : '...';
   }
