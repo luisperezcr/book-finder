@@ -19,7 +19,7 @@
       </p>
       <p>
         <strong>Description: </strong>
-        <span>{{ book.searchInfo?.textSnippet }}</span>
+        <span>{{ bookShortedDescription }} <a class="read-more-link" [href]="book.volumeInfo.previewLink" target="_blank" rel="noopener">Read more</a></span>
       </p>
     </div>
   </mat-card-content>
@@ -28,7 +28,7 @@
       <mat-chip *ngFor="let category of book.volumeInfo.categories">{{ category }}</mat-chip>
     </mat-chip-list>
 
-    <a [href]="book.volumeInfo.previewLink" target="_blank" rel="noopened" matRipple matRippleCentered="true" fxLayout fxLayoutAlign="center center"> 
+    <a [href]="book.volumeInfo.previewLink" target="_blank" rel="noopener" matRipple matRippleCentered="true" fxLayout fxLayoutAlign="center center"> 
       <mat-icon>launch</mat-icon>
     </a>
   </mat-card-footer>
