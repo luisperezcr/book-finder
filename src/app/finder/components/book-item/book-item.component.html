@@ -1,1 +1,35 @@
-<p>book-item works!</p>
+<mat-card>
+  <mat-card-title>{{ book.volumeInfo.title }}</mat-card-title>
+  <mat-card-content fxLayout fxLayoutGap="24px">
+    <div class="img-wrapper">
+      <img [src]="book.volumeInfo.imageLinks.thumbnail" [alt]="book.volumeInfo.title" loading="lazy">
+    </div>
+    <div class="book-info" fxFlex>
+      <p>
+        <strong>Author(s): </strong>
+        <span>{{ bookAuthors }}</span>
+      </p>
+      <p>
+        <strong>Publisher: </strong>
+        <span>{{ book.volumeInfo.publisher }}</span>
+      </p>
+      <p>
+        <strong>Published: </strong>
+        <span>{{ book.volumeInfo.publishedDate | date }}</span>
+      </p>
+      <p>
+        <strong>Description: </strong>
+        <span>{{ book.searchInfo?.textSnippet }}</span>
+      </p>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-chip-list>
+      <mat-chip *ngFor="let category of book.volumeInfo.categories">{{ category }}</mat-chip>
+    </mat-chip-list>
+
+    <a [href]="book.volumeInfo.previewLink" target="_blank" rel="noopened" matRipple matRippleCentered="true" fxLayout fxLayoutAlign="center center"> 
+      <mat-icon>launch</mat-icon>
+    </a>
+  </mat-card-footer>
+</mat-card>

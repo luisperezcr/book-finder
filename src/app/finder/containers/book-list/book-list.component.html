@@ -1,3 +1,12 @@
-<div fxLayout="column" fxLayoutAlign="center center">
+<div class="book-list-wrapper" fxLayout="column" fxLayoutAlign="center center">
   <app-search-input (search)="onSearch($event)"></app-search-input>
+  <p *ngIf="!bookList?.length" class="no-search-message">No results... Make a search!</p>
+  <div class="book-list" fxLayout="row wrap" fxLayoutGap="12px" fxLayoutAlign="center center">
+    <app-book-item
+      fxLayout
+      fxFlex="40%"
+      *ngFor="let book of bookList"
+      [book]="book">
+    </app-book-item>
+  </div>
 </div>

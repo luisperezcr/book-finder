@@ -21,6 +21,7 @@ export class BookListComponent implements OnInit, OnDestroy {
     this.subscription = this.finderService.findBooks(input).subscribe((books) => {
       if (books.items.length) {
         this.bookList = books.items;
+        // console.log(books.items);
       }
     });
   }
