@@ -1,8 +1,8 @@
 <mat-card>
-  <mat-card-title>{{ book.volumeInfo.title }}</mat-card-title>
+  <mat-card-title>{{ book?.volumeInfo?.title }}</mat-card-title>
   <mat-card-content fxLayout fxLayoutGap="24px">
     <div class="img-wrapper">
-      <img [src]="book.volumeInfo.imageLinks.thumbnail" [alt]="book.volumeInfo.title" loading="lazy">
+      <img [src]="book?.volumeInfo?.imageLinks?.thumbnail" [alt]="book?.volumeInfo?.title" loading="lazy">
     </div>
     <div class="book-info" fxFlex>
       <p>
@@ -11,15 +11,15 @@
       </p>
       <p>
         <strong>Publisher: </strong>
-        <span>{{ book.volumeInfo.publisher }}</span>
+        <span>{{ book?.volumeInfo?.publisher || '...' }}</span>
       </p>
       <p>
         <strong>Published: </strong>
-        <span>{{ book.volumeInfo.publishedDate | date }}</span>
+        <span>{{ book?.volumeInfo?.publishedDate | date }}</span>
       </p>
       <p>
         <strong>Description: </strong>
-        <span>{{ bookShortedDescription }} <a class="read-more-link" [href]="book.volumeInfo.previewLink" target="_blank" rel="noopener">Read more</a></span>
+        <span>{{ bookShortedDescription }} <a class="read-more-link" [href]="book?.volumeInfo?.previewLink" target="_blank" rel="noopener">Read more</a></span>
       </p>
     </div>
   </mat-card-content>
@@ -28,7 +28,7 @@
       <mat-chip *ngFor="let category of book.volumeInfo.categories">{{ category }}</mat-chip>
     </mat-chip-list>
 
-    <a [href]="book.volumeInfo.previewLink" target="_blank" rel="noopener" matRipple matRippleCentered="true" fxLayout fxLayoutAlign="center center"> 
+    <a [href]="book?.volumeInfo?.previewLink" target="_blank" rel="noopener" matRipple matRippleCentered="true" fxLayout fxLayoutAlign="center center"> 
       <mat-icon>launch</mat-icon>
     </a>
   </mat-card-footer>
