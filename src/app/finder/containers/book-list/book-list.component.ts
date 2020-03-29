@@ -10,7 +10,8 @@ import { FinderService } from '../../finder.service';
 export class BookListComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
-  bookList;
+  bookList: any;
+  loading = false;
 
   constructor(private finderService: FinderService ) { }
 
@@ -18,10 +19,11 @@ export class BookListComponent implements OnInit, OnDestroy {
   }
 
   onSearch(input: string): void {
+    this.loading = true;
     this.subscription = this.finderService.findBooks(input).subscribe((books) => {
       if (books.items.length) {
         this.bookList = books.items;
-        // console.log(books.items);
+        this.loading = false;
       }
     });
   }
