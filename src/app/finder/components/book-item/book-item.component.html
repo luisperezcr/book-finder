@@ -2,9 +2,9 @@
   <mat-card-title>{{ book?.volumeInfo?.title }}</mat-card-title>
   <mat-card-content fxLayout fxLayoutGap="24px">
     <div class="img-wrapper">
-      <img [src]="book?.volumeInfo?.imageLinks?.thumbnail" [alt]="book?.volumeInfo?.title" loading="lazy">
+      <img [src]="book?.volumeInfo?.imageLinks?.thumbnail" alt="Book without photo" loading="lazy">
     </div>
-    <div class="book-info" fxFlex>
+    <div class="book-info" fxFlex="60%">
       <p>
         <strong>Author(s): </strong>
         <span>{{ bookAuthors }}</span>
