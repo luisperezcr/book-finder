@@ -1,13 +1,13 @@
-<form [formGroup]="form" fxLayout fxLayoutGap="10px" (submit)="onSubmit()">
+<form [formGroup]="form" fxLayout fxLayoutAlign="center center" fxLayoutGap="10px" (submit)="onSubmit()">
   <mat-form-field appearance="outline">
     <mat-label>Search</mat-label>
     <input
+      formControlName="search"
       matInput
-      type="text"
+      name="search"
       placeholder="Book name"
       required
-      name="search"
-      formControlName="search">
+      type="text">
   </mat-form-field>
   <button color="primary" mat-raised-button type="submit">Search</button>
 </form>

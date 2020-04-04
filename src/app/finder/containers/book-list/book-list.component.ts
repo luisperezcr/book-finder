@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FinderService } from '../../finder.service';
 
@@ -7,16 +7,13 @@ import { FinderService } from '../../finder.service';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
 })
-export class BookListComponent implements OnInit, OnDestroy {
+export class BookListComponent implements OnDestroy {
 
   subscription: Subscription;
   bookList: any;
   loading = false;
 
   constructor(private finderService: FinderService ) { }
-
-  ngOnInit(): void {
-  }
 
   onSearch(input: string): void {
     this.loading = true;

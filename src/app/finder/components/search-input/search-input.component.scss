@@ -1,8 +1,14 @@
+form {
+  background-color: #FAFAFA;
+  width: 100vw;
+  opacity: 0.9;
+}
+
 mat-form-field {
   width: 450px;
+  margin-top: 20px;
 }
 
 button {
   height: 50px;
-  margin-top: 5px;
 }
